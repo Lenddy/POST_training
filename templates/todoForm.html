@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Todo form</title>
+	</head>
+	<body>
+		<!-- form collect user input -->
+		<form action="/todo/new" method="POST">
+			<div>
+				<!-- lable defines a label for several elemtnts -->
+				<label for="todo"> new todo: </label>
+				<input type="text" id="todo" name="todo" />
+			</div>
+			<div>
+				<label for="status">
+					<!-- select creates a dorpdown menue -->
+					<select name="status" id="status">
+						<!-- option is  the option that you get for the drop dow mene-->
+						<!--name the value corectly becouse it reach the server side -->
+						<option value="Complete">Complete</option>
+						<option value="in progres">In progres</option>
+						<option value="Cancelled">Cancelled</option>
+					</select>
+                    <div>
+                        <button type="submit">Create</button>
+                    </div>
+				</label>
+			</div>
+		</form>
+	</body>
+</html>

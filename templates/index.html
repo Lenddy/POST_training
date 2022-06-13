@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home page</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename= 'style.css'  )}}"
+	</head>
+	<body>
+		<h1>
+			Welcom to the homepage {{first_name}}
+			</h1>
+			<div>
+				<ul>
+					{% for element in list_todos: %}
+						<li>
+							{{ element["todo"] }} - {{ element["status"] }}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+            <!-- we need to link the html that we want to go to with a a tag -->
+            <a href="/todo/new">A new todo</a>
+	</body>
+</html>
